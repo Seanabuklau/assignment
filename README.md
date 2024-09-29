@@ -44,18 +44,18 @@ The playbooks on the Ansible host are split by tasks located in the `tasks/` fol
 
 The following are the main steps taken for this part of the project.
 
-## 1. Set up Express server
+### 1. Set up Express server
 
 To set up an Express server in Node.js, create a new project, install Express, define the *hello_world* endpoint using `app.get()`, and start the server with `app.listen()` on port 5656.
 
-## 2. Adding middleware
+### 2. Adding middleware
 
 A simple logging middleware was created in the `middleware/` folder and added for monitoring and debugging purposes. 
 
-## 3. Adding handler
+### 3. Adding handler
 
 A hello_world handler function was created in the `handler/` folder to process the get request to the *hello_world* endpoint by returning a "hello world" message in json.
 
-## 4. Containerisation
+### 4. Containerisation
 
 To containerise the web application, a Dockerfile was created. The base image used was Node Alpine for the Express web app, while the container exposed port 5656 to the host system. This meant that the express server running within the container listening on port 5656 can be accessed from the host or other containers on the network. 
