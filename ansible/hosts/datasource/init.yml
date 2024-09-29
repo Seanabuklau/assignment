@@ -1,0 +1,12 @@
+---
+- name: Initialize vm1
+  hosts: datasource
+  become: true
+  become_user: root
+
+  tasks:
+    - include_tasks: tasks/update-apt-cache.yml 
+    - include_tasks: tasks/install-mysql.yml
+    - include_tasks: tasks/configure-mysql.yml
+    - include_tasks: tasks/create-user.yml
+    - include_tasks: tasks/restart-mysql.yml

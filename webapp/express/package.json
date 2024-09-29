@@ -1,0 +1,14 @@
+{
+  "name": "express-webapp",
+  "version": "1.0.0",
+  "description": "take home webapp assignment",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "sean woon",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

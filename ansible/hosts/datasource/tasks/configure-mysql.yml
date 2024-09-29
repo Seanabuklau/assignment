@@ -1,0 +1,7 @@
+---
+- name: Configure MySQL to accept connections from all IP addresses
+  lineinfile:
+    dest: /etc/mysql/mysql.conf.d/mysqld.cnf
+    regexp: 'bind-address\s*='
+    line: 'bind-address = 0.0.0.0'
+    state: present
